@@ -1,5 +1,9 @@
 import "./globals.css";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Halloween Myst",
+};
 export default function RootLayout({
   children,
 }: Readonly<{
