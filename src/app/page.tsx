@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex h-screen justify-center items-center">
+    <main className="flex h-dvh justify-center items-center">
       <img src="/office.jpeg" className="absolute -z-10 h-full w-full" />
       <Stage stage={stage} />
       <Button text="Continuar" handleClick={handleClick} />
