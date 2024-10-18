@@ -20,6 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== undefined) {
+      setSize([window.innerWidth, window.innerHeight]);
       window.onresize = () => {
         setSize([window.innerWidth, window.innerHeight]);
       };
