@@ -1,0 +1,17 @@
+@keyframes aparition {
+    0% {
+        left: 30px;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+img {
+    position: relative;
+    animation-name: aparition;
+    animation-duration: 1s;
+}
