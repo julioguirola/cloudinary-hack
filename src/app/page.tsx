@@ -16,23 +16,34 @@ function Stage({ stage }: { stage: number }) {
 
 export default function Home() {
   const [stage, setStage] = useState(1);
-  const [size, setSize] = useState("");
+  const [size, setSize] = useState([0, 0]);
 
   useEffect(() => {
     if (typeof window !== undefined) {
-      setSize(window.innerWidth + " " + window.innerHeight);
+      window.onresize = () => {
+        setSize([window.innerWidth, window.innerHeight]);
+      };
     }
-  }, []);
+  });
 
   const handleClick = () => {
     setStage(stage + 1);
   };
 
   return (
-    <main className="flex h-dvh justify-center items-center">
-      <img src="/office.jpeg" className="absolute -z-10 h-full w-full" />
-      <Stage stage={stage} />
-      <Button text="Continuar" handleClick={handleClick} />
-    </main>
+    <>
+      {size[0] >= size[1] && (
+        <main className="flex h-dvh justify-center items-center">
+          <img src="/office.jpeg" className="absolute -z-10 h-full w-full" />
+          <Stage stage={stage} />
+          <Button text="Continuar" handleClick={handleClick} />
+        </main>
+      )}
+      {size[0] < size[1] && (
+        <main className="flex h-dvh justify-center items-center">
+          <img src="/rotate.png" />
+        </main>
+      )}
+    </>
   );
 }
