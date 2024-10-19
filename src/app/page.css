@@ -1,0 +1,29 @@
+@keyframes motion_right {
+    from {
+        right: 60px;
+    }
+    to {
+        right: 0px;
+    }
+}
+
+@keyframes motion_left {
+    from {
+        left: 60px;
+    }
+    to {
+        right: 0px;
+    }
+}
+
+section div img:nth-child(1) {
+    position: relative;
+    animation-name: motion_right;
+    animation-duration: 1s;
+}
+
+section div img:nth-child(2) {
+    position: relative;
+    animation-name: motion_left;
+    animation-duration: 1s;
+}
