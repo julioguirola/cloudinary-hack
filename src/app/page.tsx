@@ -37,6 +37,7 @@ function Stage_One({ nextStage }: { nextStage: Function }) {
           nextStage(2);
         }}
         text={"¿Por qué estoy aquí?"}
+        empty={false}
       />
       <Option
         handleClick={() => {
@@ -45,6 +46,7 @@ function Stage_One({ nextStage }: { nextStage: Function }) {
           nextStage(-1);
         }}
         text={"Jaja muy gracioso... me voy."}
+        empty={false}
       />
     </section>
   );
@@ -59,7 +61,6 @@ function Stage_Two({ nextStage }: { nextStage: Function }) {
           alt="Detective Ween"
           width={250}
           height={250}
-          className="h-auto"
           className="h-[25dvh]"
         />
       </div>
@@ -74,12 +75,14 @@ function Stage_Two({ nextStage }: { nextStage: Function }) {
           nextStage(-2);
         }}
         text={"No creo haber estado en esos lugares"}
+        empty={false}
       />
       <Option
         handleClick={() => {
           nextStage(3);
         }}
         text={"¿Una imágen?"}
+        empty={false}
       />
     </section>
   );
@@ -105,6 +108,14 @@ function Stage_OneTwo({ nextStage }: { nextStage: Function }) {
           nextStage(3);
         }}
         text={"¿Qué quieren de mí?"}
+        empty={false}
+      />
+      <Option
+        handleClick={() => {
+          nextStage(3);
+        }}
+        text={"¿Qué quieren de mí?"}
+        empty={true}
       />
     </section>
   );
@@ -135,6 +146,16 @@ function Stage_Three({ nextStage }: { nextStage: Function }) {
           nextStage(4);
         }}
         text={"De acuerdo."}
+        empty={false}
+      />
+      <Option
+        handleClick={() => {
+          const subir = new Audio("/subir.mp3");
+          subir.play();
+          nextStage(4);
+        }}
+        text={"De acuerdo."}
+        empty={true}
       />
     </section>
   );
@@ -165,6 +186,16 @@ function Stage_TwoThree({ nextStage }: { nextStage: Function }) {
           nextStage(4);
         }}
         text={"De acuerdo."}
+        empty={false}
+      />
+      <Option
+        handleClick={() => {
+          const subir = new Audio("/subir.mp3");
+          subir.play();
+          nextStage(4);
+        }}
+        text={"De acuerdo."}
+        empty={true}
       />
     </section>
   );
@@ -225,6 +256,24 @@ function Stage_Four({ nextStage }: { nextStage: Function }) {
       </div>
 
       <Message who={false} text="Sabíamos que estabas dispuesto a colaborar." />
+      <Option
+        handleClick={() => {
+          const subir = new Audio("/subir.mp3");
+          subir.play();
+          nextStage(4);
+        }}
+        text={"De acuerdo."}
+        empty={true}
+      />
+      <Option
+        handleClick={() => {
+          const subir = new Audio("/subir.mp3");
+          subir.play();
+          nextStage(4);
+        }}
+        text={"De acuerdo."}
+        empty={true}
+      />
     </section>
   );
 }
