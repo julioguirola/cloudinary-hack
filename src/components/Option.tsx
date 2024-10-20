@@ -3,11 +3,9 @@ import { MouseEventHandler } from "react";
 export default function ({
   text,
   handleClick,
-  stage,
 }: {
   text: string;
   handleClick: MouseEventHandler;
-  stage: number;
 }) {
   return (
     <>
