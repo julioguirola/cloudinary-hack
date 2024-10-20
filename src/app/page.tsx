@@ -16,14 +16,12 @@ function Stage_One({ nextStage }: { nextStage: Function }) {
           alt="Detective Hallow"
           width={250}
           height={250}
-          className="h-[35dvh]"
         />
         <Image
           src={"/ween.png"}
           alt="Detective Ween"
           width={250}
           height={250}
-          className="h-[35dvh]"
         />
       </div>
 
@@ -61,7 +59,6 @@ function Stage_Two({ nextStage }: { nextStage: Function }) {
           alt="Detective Ween"
           width={250}
           height={250}
-          className="h-[25dvh]"
         />
       </div>
 
@@ -97,7 +94,6 @@ function Stage_OneTwo({ nextStage }: { nextStage: Function }) {
           alt="Detective hallow"
           width={250}
           height={250}
-          className="h-[25dvh]"
         />
       </div>
 
@@ -130,7 +126,6 @@ function Stage_Three({ nextStage }: { nextStage: Function }) {
           alt="Detective hallow"
           width={250}
           height={250}
-          className="h-[25dvh]"
         />
       </div>
 
@@ -170,7 +165,6 @@ function Stage_TwoThree({ nextStage }: { nextStage: Function }) {
           alt="Detective Ween"
           width={250}
           height={250}
-          className="h-[25dvh]"
         />
       </div>
 
@@ -210,7 +204,6 @@ function Stage_Four({ nextStage }: { nextStage: Function }) {
           alt="Detective Ween"
           width={250}
           height={250}
-          className="h-[25dvh]"
         />
         <CldUploadWidget
           options={{
@@ -251,7 +244,6 @@ function Stage_Four({ nextStage }: { nextStage: Function }) {
           alt="Detective Hallow"
           width={250}
           height={250}
-          className="h-[25dvh]"
         />
       </div>
 
